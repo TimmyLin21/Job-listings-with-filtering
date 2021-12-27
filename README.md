@@ -118,7 +118,7 @@ if (Object.values(filterItems).join('') === '') {
 
 ### Continued development
 
-First of all, I would like to get familiar with Web Accessibility, such as WAI-ARIA and AOM. Secondly, I'm getting used to using Tailwind but there is still room for improvement. Therefore, I'll keep using tailwind for next project. Last but not least, I'm going to practice using Vue for the project as well.    
+First of all, I would like to get familiar with Web Accessibility, such as WAI-ARIA and AOM. Secondly, I'm getting used to using Tailwind but there is still room for improvement. Therefore, I'll keep using tailwind for next project. Last but not least, I'm going to practice using Vue for the next project as well.    
 
 ### Useful resources
 
