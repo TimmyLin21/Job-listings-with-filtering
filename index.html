@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Job Listings</title>
+
+  <link rel="stylesheet" href="./css/output.css">
+</head>
+<body class="text-primary">
+  <header class="h-40 bg-[#5ca5a4]">
+    <div class="h-40 bg-cover bg-center bg-header-mobile xl:bg-header-desktop"></div>
+  </header>
+  <main class="bg-grayish-cyan-100">
+    <div class="py-12 px-8 md:container mx-auto">
+      <div class="card -mt-20 mb-16 hidden" id="filterCard">
+        <div class="pt-5 px-5 flex items-center">
+          <ul class="flex w-10/12 flex-wrap" id="filter-list">
+          </ul>
+          <div class="w-2/12 flex justify-center mb-4">
+            <input type="button" value="Clear" class="text-primary font-medium hover:underline cursor-pointer" id="clearAllBtn">
+          </div>
+        </div>
+      </div>
+      <ul id="job-list">
+        <li class="card card-highlight mb-10">
+          <img src="./images/photosnap.svg" alt="photosnap logo" class="card-logo">
+          <div class="card-body">
+            <img src="./images/photosnap.svg" alt="photosnap logo" class="hidden mr-6 lg:block">
+            <section class="">
+              <div class="flex items-center mb-4">
+                <h3 class="mr-4 text-primary font-medium">Photosnap</h3>
+                <span class="badge bg-primary mr-2">New!</span>
+                <span class="badge bg-grayish-cyan-400">Featured</span>
+              </div>
+              <h2 class="text-lg text-grayish-cyan-400 font-bold mb-4 hover:text-primary cursor-pointer">Senior Frontend Developer</h2>
+              <div class="flex items-center pb-4 mb-4 border-b lg:border-none lg:pb-0 lg:mb-0">
+                <p class="mr-2">1d ago</p>
+                <ul class="flex">
+                  <li class="mr-2 list-dot">Full Time</li>
+                  <li class="list-item">USA only</li>
+                </ul>
+              </div>
+            </section>
+            <section class="lg:ml-auto">
+              <button type="button" class="btn bg-grayish-cyan-100 mr-4">Frontend</button>
+              <button type="button" class="btn bg-grayish-cyan-100 mr-4">Senior</button>
+              <button type="button" class="btn bg-grayish-cyan-100 mr-4">HTML</button>
+              <button type="button" class="btn bg-grayish-cyan-100 mr-4">CSS</button>
+              <button type="button" class="btn bg-grayish-cyan-100">JavaScript</button>        
+            </section>
+          </div>
+        </li>
+        <li class="card mb-10">
+          <img src="./images/account.svg" alt="Account logo" class="card-logo">
+          <div class="card-body">
+            <img src="./images/account.svg" alt="account logo" class="hidden mr-6 lg:block">
+            <section>
+              <div class="flex items-center mb-4">
+                <h3 class="mr-4 text-primary font-medium">Account</h3>
+                <span class="badge bg-primary mr-2">New!</span>
+              </div>
+              <h2 class="text-lg text-grayish-cyan-400 font-bold mb-4 hover:text-primary cursor-pointer">Junior Frontend Developer</h2>
+              <div class="flex items-center pb-4 mb-4 border-b lg:border-none lg:pb-0 lg:mb-0">
+                <p class="mr-2">2d ago</p>
+                <ul class="flex">
+                  <li class="mr-2 list-item">Part Time</li>
+                  <li class="list-item">USA only</li>
+                </ul>
+              </div>
+            </section>
+            <section class="lg:ml-auto">
+              <button type="button" class="btn bg-grayish-cyan-100 mr-4">Frontend</button>
+              <button type="button" class="btn bg-grayish-cyan-100 mr-4">Junior</button>
+              <button type="button" class="btn bg-grayish-cyan-100 mr-4">JavaScript</button>
+              <button type="button" class="btn bg-grayish-cyan-100 mr-4">React</button>
+              <button type="button" class="btn bg-grayish-cyan-100">Sass</button>        
+            </section>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <footer class="text-xs text-center py-4">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-[#3e52a3]">Frontend Mentor</a>. 
+    Coded by <a href="#" class="text-[#3e52a3]">Tim Lin</a>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+  <script src="./js/all.js"></script>
+</body>
+</html>

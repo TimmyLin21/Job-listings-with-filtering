@@ -1,0 +1,61 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+
+/* tailwind */
+@tailwind base;
+@layer base {
+  h1 {
+    @apply font-header;
+  }
+  h2 {
+    @apply font-header;
+  }
+  h3 {
+    @apply font-header;
+  }
+}
+
+@tailwind components;
+@layer components {
+  /* card */
+  .card {
+    @apply shadow-lg rounded-md relative bg-white
+  }
+  .card-highlight {
+    @apply before:block before:absolute before:h-full before:w-[5px] before:bg-primary before:rounded-l-[5px]
+  }
+  .card-logo{
+    @apply absolute top-0 left-8 -translate-y-1/2 w-12 lg:hidden
+  }
+  .card-body{
+    @apply pt-8 px-4 lg:px-10 lg:py-8 lg:flex lg:items-center
+  }
+  
+  /* badge */
+  .badge {
+    @apply rounded-2xl py-2 px-3 text-white font-medium leading-4
+  }
+  /* button */
+  .btn {
+    @apply rounded-lg font-medium p-2 mb-4 lg:mb-0 hover:bg-primary hover:text-white
+  }
+  .btn-group {
+    @apply flex lg:mb-4
+  }
+  .btn-group .btn {
+    @apply rounded-r-none hover:bg-grayish-cyan-100 hover:text-primary
+  }
+  .btn-group .btn-addon {
+    @apply bg-primary rounded-r-lg p-3 mb-4 flex items-center lg:mb-0 hover:bg-grayish-cyan-400 hover:cursor-pointer
+  }
+}
+
+@tailwind utilities;
+@layer utilities {
+  /* list */
+  .list-dot {
+    @apply before:pr-2 before:text-primary before:content-['•']
+  }
+}
+
+
