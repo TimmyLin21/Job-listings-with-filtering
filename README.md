@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/TimmyLin21/Job-listings-with-filtering)
+- Live Site URL: [Github Page](https://timmylin21.github.io/Job-listings-with-filtering/)
 
 ## My process
 
@@ -162,7 +162,7 @@ filterCard.addEventListener('click', (e) => {
 
 ### Continued development
 
-First of all, I would like to get familiar with Web Accessibility, such as WAI-ARIA and AOM. Secondly, I'm getting used to using Tailwind but there is still room for improvement. Therefore, I'll keep using tailwind for next project. Last but not least, I'm going to practice using Vue for the project as well.    
+First of all, I would like to get familiar with Web Accessibility, such as WAI-ARIA and AOM. Secondly, I'm getting used to using Tailwind but there is still room for improvement. Therefore, I'll keep using tailwind for next project. Last but not least, I'm going to practice using Vue for the next project as well.    
 
 ### Useful resources
 
