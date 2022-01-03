@@ -661,12 +661,20 @@ h3{
   height: 10rem;
 }
 
+.h-\[14px\]{
+  height: 14px;
+}
+
 .w-10\/12{
   width: 83.333333%;
 }
 
 .w-2\/12{
   width: 16.666667%;
+}
+
+.w-\[14px\]{
+  width: 14px;
 }
 
 .cursor-pointer{
@@ -716,6 +724,10 @@ h3{
 
 .bg-header-mobile{
   background-image: url(../images/bg-header-mobile.svg);
+}
+
+.bg-remove-icon{
+  background-image: url(../images/icon-remove.svg);
 }
 
 .bg-cover{

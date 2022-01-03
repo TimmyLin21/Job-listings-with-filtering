@@ -75,7 +75,7 @@ function renderFilterList() {
         <li class="btn-group mr-4">
           <div class="btn bg-grayish-cyan-100 rounded-r-none">${filterItems[key]}</div>
           <button type="button" class="btn-addon" data-type="${key}" data-value="${filterItems[key]}">
-            <img src="./images/icon-remove.svg" alt="remove icon">
+            <i data-type="${key}" data-value="${filterItems[key]}" class="w-[14px] h-[14px] bg-remove-icon"></i>  
           </button>
         </li>
         `;
@@ -87,7 +87,7 @@ function renderFilterList() {
           <li class="btn-group mr-4">
             <div class="btn bg-grayish-cyan-100 rounded-r-none">${item}</div>
             <button type="button" class="btn-addon" data-type="${key}" data-value="${item}">
-              <img src="./images/icon-remove.svg" alt="remove icon">
+              <i data-type="${key}" data-value="${item}" class="w-[14px] h-[14px] bg-remove-icon"></i>
             </button>
           </li>
           `;
@@ -162,7 +162,7 @@ clearAllBtn.addEventListener('click', () => {
 });
 // remove item
 filterCard.addEventListener('click', (e) => {
-  if (e.target.className === 'btn-addon') {
+  if (e.target.className === 'btn-addon' || e.target.nodeName === 'I') {
     // remove the chosen item
     const value = e.target.getAttribute('data-value');
     const type = e.target.getAttribute('data-type');

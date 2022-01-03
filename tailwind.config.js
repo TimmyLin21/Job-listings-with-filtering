@@ -19,6 +19,7 @@ module.exports = {
       backgroundImage: {
         'header-mobile': 'url(../images/bg-header-mobile.svg)',
         'header-desktop': 'url(../images/bg-header-desktop.svg)',
+        'remove-icon': 'url(../images/icon-remove.svg)',
       },
       fontFamily: {
         header: [

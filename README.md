@@ -115,6 +115,50 @@ if (Object.values(filterItems).join('') === '') {
   addBtnEvent();
 }
 ```
+This helps me to fix the bug that the event won't trigger while you click on the icons.
+```js
+function renderFilterList() {
+  let str = '';
+  keys.forEach((key, i) => {
+    if (i <= 1) {
+      if (filterItems[key]) {
+        str += `
+        <li class="btn-group mr-4">
+          <div class="btn bg-grayish-cyan-100 rounded-r-none">${filterItems[key]}</div>
+          <button type="button" class="btn-addon" data-type="${key}" data-value="${filterItems[key]}">
+            <i data-type="${key}" data-value="${filterItems[key]}" class="w-[14px] h-[14px] bg-remove-icon"></i>  
+          </button>
+        </li>
+        `;
+      }
+    } else if (i >= 2) {
+      if (filterItems[key]) {
+        filterItems[key].forEach((item) => {
+          str += `
+          <li class="btn-group mr-4">
+            <div class="btn bg-grayish-cyan-100 rounded-r-none">${item}</div>
+            <button type="button" class="btn-addon" data-type="${key}" data-value="${item}">
+              <i data-type="${key}" data-value="${item}" class="w-[14px] h-[14px] bg-remove-icon"></i>
+            </button>
+          </li>
+          `;
+        });
+      }
+    }
+  });
+  filterList.innerHTML = str;
+}
+filterCard.addEventListener('click', (e) => {
+  if (e.target.className === 'btn-addon' || e.target.nodeName === 'I') {
+    // remove the chosen item
+    ...
+    // render filter again
+    ...
+    // close the filter while list is empty
+    ...
+  }
+});
+```
 
 ### Continued development
 
