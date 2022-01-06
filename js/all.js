@@ -100,8 +100,10 @@ function renderFilterList() {
 // filterData
 function filterData() {
   keys.forEach((key, i) => {
+    // 判斷資料是不是陣列
     if (i <= 1) {
       if (filterItems[key]) {
+        // 判斷資料篩選過了沒有
         if (filteredData.length !== 0) {
           const filteredArr = filteredData.filter((item) => item[key] === filterItems[key]);
           filteredData = filteredArr;
@@ -112,6 +114,7 @@ function filterData() {
       }
     } else if (i >= 2) {
       if (filterItems[key]) {
+        // 因為陣列有多筆資料所以使用forEach
         filterItems[key].forEach((item) => {
           if (filteredData.length !== 0) {
             const filteredArr = filteredData.filter((data) => data[key].includes(item));
@@ -136,6 +139,7 @@ function addBtnEvent() {
         const type = e.target.getAttribute('data-type');
         if (filterCard.classList.contains('hidden')) {
           filterCard.classList.remove('hidden');
+          filterCard.classList.add('animate','pop')
         }
         if (type === 'role') {
           filterItems.role = value;
@@ -156,7 +160,9 @@ function addBtnEvent() {
 const clearAllBtn = document.querySelector('#clearAllBtn');
 clearAllBtn.addEventListener('click', () => {
   filterItemsReset();
+  filteredData.splice(0);
   filterCard.classList.add('hidden');
+  filterCard.classList.remove('animate','pop');
   renderData(allData);
   addBtnEvent();
 });
@@ -183,6 +189,7 @@ filterCard.addEventListener('click', (e) => {
     // close the filter while list is empty
     if (Object.values(filterItems).join('') === '') {
       filterCard.classList.add('hidden');
+      filterCard.classList.remove('animate','pop');
       renderData(allData);
       addBtnEvent();
     }

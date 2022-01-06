@@ -821,6 +821,50 @@ h3{
   content: var(--tw-content);
 }
 
+/* animation */
+
+.animate {
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-name: animate-fade;
+          animation-name: animate-fade;
+  -webkit-animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+          animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}
+
+/* Pop In */
+
+.animate.pop {
+  -webkit-animation-name: animate-pop;
+          animation-name: animate-pop;
+}
+
+@-webkit-keyframes animate-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes animate-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
 .hover\:text-primary:hover{
   --tw-text-opacity: 1;
   color: hsl(180 29% 50% / var(--tw-text-opacity));
