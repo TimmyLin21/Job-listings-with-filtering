@@ -167,6 +167,7 @@ First of all, I would like to get familiar with Web Accessibility, such as WAI-A
 ### Useful resources
 
 - [Tailwind](https://tailwindcss.com/) - This guided me through the project. I really liked how detailed it is and will use it going forward.
+- [A Handy Little System for Animated Entrances in CSS](https://css-tricks.com/a-handy-little-system-for-animated-entrances-in-css/) - This helped me create css animation efficiently.
 
 ## Author
 
